@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zan.hu.user.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.zan.hu.user.model.User">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="guid" jdbcType="VARCHAR" property="guid"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="nickname" jdbcType="VARCHAR" property="nickname"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="gender" jdbcType="VARCHAR" property="gender"/>
+        <result column="avatar" jdbcType="VARCHAR" property="avatar"/>
+        <result column="qq" jdbcType="VARCHAR" property="qq"/>
+        <result column="open_id" jdbcType="VARCHAR" property="openId"/>
+        <result column="extension" jdbcType="VARCHAR" property="extension"/>
+        <result column="is_delete" jdbcType="BIT" property="isDelete"/>
+        <result column="created" jdbcType="TIMESTAMP" property="created"/>
+        <result column="updated" jdbcType="TIMESTAMP" property="updated"/>
+    </resultMap>
+
+    <select id="selectByGuid" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select * from user
+        where guid = #{guid}
+    </select>
+</mapper>
