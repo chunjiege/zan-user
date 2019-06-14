@@ -1,14 +1,12 @@
 package com.zan.hu.user.service;
 
 import com.zan.hu.CommonThreadLocal;
+import com.zan.hu.CurrentRelatedInfo;
 import com.zan.hu.user.UserService;
 import com.zan.hu.user.dao.UserDao;
 import com.zan.hu.user.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Map;
 
 /**
  * @version 1.0
@@ -24,9 +22,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User selectByGuid(String guid) {
-        if (!CollectionUtils.isEmpty(CommonThreadLocal.get())) {
-            Map<String, Object> map = CommonThreadLocal.get();
-            System.out.println(map.get("user"));
+        CurrentRelatedInfo currentRelatedInfo = CommonThreadLocal.get();
+        if (currentRelatedInfo != null) {
+            User user = currentRelatedInfo.getUser();
+            System.out.println(user);
         }
         return userDao.selectByGuid(guid);
     }
