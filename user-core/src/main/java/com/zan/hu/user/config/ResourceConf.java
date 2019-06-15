@@ -1,6 +1,8 @@
 package com.zan.hu.user.config;
 
+import com.zan.hu.jwt.ResourceServerConf;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 /**
  * @version 1.0
@@ -9,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
  * @Description todo
  **/
 @Configuration
-//@EnableResourceServer
-public class ResourceConf /*extends ResourceServerConf */ {
+@EnableResourceServer
+public class ResourceConf extends ResourceServerConf {
 
     private static final String RESOURCE_ID = "user-server";
 

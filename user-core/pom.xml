@@ -22,11 +22,10 @@
             <artifactId>user-api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>com.zan.hu</groupId>-->
-            <!--<artifactId>jwt-starter</artifactId>-->
-            <!--<version>${zan-starter.version}</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.zan.hu</groupId>
+            <artifactId>jwt-starter</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.zan.hu</groupId>
             <artifactId>response-advice-starter</artifactId>
@@ -47,10 +46,6 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.security.oauth.boot</groupId>-->
-            <!--<artifactId>spring-security-oauth2-autoconfigure</artifactId>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
