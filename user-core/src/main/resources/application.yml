@@ -30,6 +30,10 @@ spring:
   redis:
     host: 118.31.20.148
     port: 6378
+  servlet:
+    multipart:
+      max-file-size: 30
+      max-request-size: 50
 
 #mybatis
 mybatis:
@@ -45,10 +49,8 @@ current:
   thread:
     data:
       enable: true
-
-#----白名单
-#white:
-#  list:
-#    requestMapping:
-#      - /api/global
+zan:
+  feign:
+    multipart:
+      enabled: true
 
